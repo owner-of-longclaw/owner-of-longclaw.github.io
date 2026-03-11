@@ -53,21 +53,6 @@ body::after {
   opacity: 0.35;
   pointer-events:none;
   z-index:0;
-    <div class="rain" id="rain"></div>
-<script>
-const rain = document.getElementById('rain');
-for(let i = 0; i < 80; i++) {
-  const drop = document.createElement('div');
-  drop.className = 'drop';
-  drop.style.left = Math.random() * 100 + 'vw';
-  drop.style.height = Math.random() * 80 + 40 + 'px';
-  drop.style.animationDuration = Math.random() * 1.5 + 0.8 + 's';
-  drop.style.animationDelay = Math.random() * 3 + 's';
-  drop.style.opacity = Math.random() * 0.5 + 0.2;
-  rain.appendChild(drop);
-}
-</script>
-}
 }
 
 /* NAV */
@@ -267,6 +252,7 @@ section {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 80px;
+  width: 100%;
 }
 
 /* SECTION HEADERS */
@@ -1086,7 +1072,20 @@ footer {
   <div class="footer-text">© 2025 <span class="footer-accent">Your Name</span> — Cybersecurity Portfolio</div>
   <div class="footer-text">Built with <span class="footer-accent">♥</span> and passion for security</div>
 </footer>
-
+ <div class="rain" id="rain"></div>
+<script>
+const rain = document.getElementById('rain');
+for(let i = 0; i < 80; i++) {
+  const drop = document.createElement('div');
+  drop.className = 'drop';
+  drop.style.left = Math.random() * 100 + 'vw';
+  drop.style.height = Math.random() * 80 + 40 + 'px';
+  drop.style.animationDuration = Math.random() * 1.5 + 0.8 + 's';
+  drop.style.animationDelay = Math.random() * 3 + 's';
+  drop.style.opacity = Math.random() * 0.5 + 0.2;
+  rain.appendChild(drop);
+}
+</script>
 <script>
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
@@ -1111,6 +1110,7 @@ document.querySelectorAll('.skills-grid, .projects-grid, .certs-grid, .stats-gri
 </body>
 
 </html>
+
 
 
 

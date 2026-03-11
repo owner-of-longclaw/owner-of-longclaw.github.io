@@ -38,20 +38,36 @@ body::after {
   background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px);
   pointer-events:none;
   z-index:9999;
+  
 }
 
 /* Grid bg */
-body::before {
+  body::before {
   content:'';
   position:fixed;
   inset:0;
-  background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=1920&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.55;
+  opacity: 0.35;
   pointer-events:none;
   z-index:0;
+    <div class="rain" id="rain"></div>
+<script>
+const rain = document.getElementById('rain');
+for(let i = 0; i < 80; i++) {
+  const drop = document.createElement('div');
+  drop.className = 'drop';
+  drop.style.left = Math.random() * 100 + 'vw';
+  drop.style.height = Math.random() * 80 + 40 + 'px';
+  drop.style.animationDuration = Math.random() * 1.5 + 0.8 + 's';
+  drop.style.animationDelay = Math.random() * 3 + 's';
+  drop.style.opacity = Math.random() * 0.5 + 0.2;
+  rain.appendChild(drop);
+}
+</script>
+}
 }
 
 /* NAV */
@@ -738,7 +754,27 @@ footer {
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
 }
+  .rain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(transparent, rgba(0,229,255,0.4));
+  animation: fall linear infinite;
+  top: -100px;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
 </style>
+  
 </head>
 <body>
 
@@ -1075,6 +1111,7 @@ document.querySelectorAll('.skills-grid, .projects-grid, .certs-grid, .stats-gri
 </body>
 
 </html>
+
 
 
 

@@ -7,8 +7,44 @@
 <title>Your Name — Cybersecurity Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#04070f;--surface:#080e1c;--card:#0c1424;--border:#152038;--accent:#4a9eff;--accent2:#ff3c6e;--accent3:#7ec8e3;--text:#d4e0f0;--muted:#2d4a6a;--muted2:#4a7090;}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:/* 1. Update the color variables */
+:root {
+  --bg: #04070f; 
+  --surface: #080e1c;
+  --card: #0c1424;
+  --border: #152038;
+  --accent: #000000;  /* Changed from blue to black */
+  --accent2: #ff3c6e;
+  --accent3: #000000; /* Changed from light blue to black */
+  --text: #000000;    /* Changed from light grey to black */
+  --muted: #2d4a6a;
+  --muted2: #000000;   /* Changed to black for better contrast if on light bg */
+}
+
+/* 2. Update all previously white headers and roles to bold black */
+.hero-name, 
+.section-title, 
+.exp-role, 
+.project-name, 
+.cert-name, 
+.contact-value {
+  color: #000000 !important;
+  font-weight: 800 !important; /* Forces bold black */
+}
+
+/* 3. Ensure the Highlight text (like 'AK') is bold black */
+.hero-name .highlight, 
+.section-title span {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* 4. Update the Status Badge text */
+.status-badge {
+  color: #000000;
+  font-weight: 700;
+  border-color: #000000;
+}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overflow-x:hidden;}
 

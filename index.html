@@ -39,6 +39,24 @@
   font-weight: 800;
 }
 
+/* Fix for the top navigation area text visibility */
+.navbar, 
+.nav-logo, 
+.nav-links a {
+  color: #ffffff !important; /* Forces the text to be white */
+  font-weight: 700;         /* Keeps it bold and clear */
+  opacity: 1 !important;    /* Ensures it isn't faded out */
+}
+
+/* Ensures the logo/initials in the corner stay white */
+.nav-logo span {
+  color: #ffffff !important;
+}
+
+/* Keeps the navigation links white even when you hover over them */
+.nav-links a:hover {
+  color: #00e676 !important; /* Uses your green for the hover effect */
+}  
 /* 4. Update the Status Badge text */
 .status-badge {
   color: #000000;

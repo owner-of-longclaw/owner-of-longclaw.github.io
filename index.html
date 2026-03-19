@@ -116,7 +116,6 @@
 }
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overflow-x:hidden;}
-
 #bg-slideshow{position:fixed;inset:0;z-index:0;overflow:hidden;}
 #bg-slideshow .slide{position:absolute;inset:0;opacity:0;transition:opacity 2s ease-in-out;}
 #bg-slideshow .slide.active{opacity:1;}
@@ -248,7 +247,7 @@ footer{background:rgba(8,14,28,.92);border-top:1px solid var(--border);padding:2
 </head>
 <body>
 <div id="bg-slideshow"></div>
-
+<div id="cursor-glow"></div>
 <nav>
   <div class="nav-logo">I'm <span>AK</span></div>
   <ul class="nav-links">
@@ -374,7 +373,11 @@ setInterval(() => {
   cur = (cur + 1) % slides.length;
   slides[cur].classList.add('active');
 }, 7000);
-
+const glow = document.getElementById('cursor-glow');
+document.addEventListener('mousemove', (e) => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
 // Scroll reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

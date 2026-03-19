@@ -53,6 +53,16 @@
   z-index: 10; /* Put it above background but below content */
   pointer-events: none; /* So you can still click things */
 }
+.btn-primary, .btn-outline {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05) translateY(-3px) !important;
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.5) !important;
+}
 .project-card, .skill-card, .cert-card {
   background: rgba(12, 20, 36, 0.6) !important; /* Semi-transparent */
   backdrop-filter: blur(12px); /* Blurs the background behind the card */

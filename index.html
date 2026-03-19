@@ -38,6 +38,13 @@
   color: #000000;
   font-weight: 800;
 }
+.project-card, .skill-card, .cert-card {
+  background: rgba(12, 20, 36, 0.6) !important; /* Semi-transparent */
+  backdrop-filter: blur(12px); /* Blurs the background behind the card */
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 .project-card:hover {
   background: #cbd5e1; /* A light, clean tech-gray */
   transform: translateY(-8px);

@@ -38,6 +38,21 @@
   color: #000000;
   font-weight: 800;
 }
+  .scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.05) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 10; /* Put it above background but below content */
+  pointer-events: none; /* So you can still click things */
+}
 .project-card, .skill-card, .cert-card {
   background: rgba(12, 20, 36, 0.6) !important; /* Semi-transparent */
   backdrop-filter: blur(12px); /* Blurs the background behind the card */

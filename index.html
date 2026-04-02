@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,8 +127,18 @@ html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overflow-x:hidden;}
 #bg-slideshow{position:fixed;inset:0;z-index:0;overflow:hidden;}
 #bg-slideshow .slide{position:absolute;inset:0;opacity:0;transition:opacity 2s ease-in-out;}
-#bg-slideshow .slide.active{opacity:1;}
+#bg-slideshow .slide.active{opacity:0.3;}
 #bg-slideshow .slide svg{position:absolute;inset:0;width:100%;height:100%;}
+/* Controls how visible the background images are */
+#bg-slideshow .slide.active {
+  opacity: 0.3; /* 1.0 is fully bright, 0.1 is very dark/faint */
+}
+
+/* Optional: Darken the container behind the images to make them pop */
+#bg-slideshow {
+  background: #000; /* Ensures the background is pure black behind the images */
+}
+<div style="position:fixed; inset:0; background:rgba(4, 7, 15, 0.7); z-index:1; pointer-events:none;"></div>
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(4,7,15,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between;}
 .nav-logo{font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--accent);letter-spacing:2px;}

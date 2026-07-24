@@ -1,1 +1,2 @@
-https://owner-of-longclaw.github.io/
+Check out the official [GitHub Docs](https://docs.github.com) for more tips.
+
